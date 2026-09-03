@@ -1,0 +1,16 @@
+import turtle
+import random
+import time
+t=turtle.Turtle()
+t.speed(0)
+sc = turtle.Screen()
+sc.bgcolor("black")
+#define a function to draw a dancing circle 
+def draw_circle():
+    t.penup()
+    t.goto(random.randint(-200, 200), random.randint(-200, 200))
+    #choose a random color for the circle
+    r = random.randint(0, 255)
+    g= random.randint(0, 255)
+    b = random.randint(0, 255)
+    sc.colormode(255)
