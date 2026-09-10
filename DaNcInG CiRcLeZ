@@ -1,0 +1,57 @@
+
+import turtle
+import random
+import time
+t=turtle.Turtle()
+t.speed(0)
+sc = turtle.Screen()
+sc.bgcolor("black")
+#define a function to draw a dancing circle 
+def draw_circle():
+    t.penup()
+    t.goto(random.randint(-200, 200), random.randint(-200, 200))
+    #choose a random color for the circle
+    r = random.randint(0, 255)
+    g= random.randint(0, 255)
+    b = random.randint(0, 255)
+    sc.colormode(255)
+    t.pencolor(r,g,b)
+    t.fillcolor(r,g,b)
+    #Draw the circle
+
+    t.begin_fill()
+    t.pendown()
+    t.circle(random.randint(50,70))
+    t.penup()
+    t.end_fill()
+    t.hideturtle()
+
+#Initial delay in seconds 
+delay = 0.9
+#track the start time
+start_time = time.time()
+
+#Loop to draw circles with decreasing delay
+for i in range(70):
+    draw_circle()
+    t.clear()
+    delay = max(0.01, delay - 0.05)
+
+#track the end time
+end_time = time.time()
+# Calculate the total elapsed time
+elapsed_time = round(end_time - start_time, 2)
+#display the elapsed time on the screen
+t.penup()
+t.goto(0,0)
+t.color("white")
+
+t.write(f"Total animation time: {elapsed_time} seconds", align="center", font=("Arial", 16, "bold"))
+
+time.sleep(2)
+print(f"Total animation time: {elapsed_time} seconds")
+turtle.done()
+
+
+
+
