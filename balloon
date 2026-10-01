@@ -82,6 +82,33 @@ while running:
     scr.update()
     current_time = time.time()
     if current_time - last_spawn_time > spawn_interval:
+        spawn_balloon()
+        last_spawn_time = current_time
+
+    #Move balloons
+    for balloon in balloons[:]:
+        balloon.sety(balloon.ycor()-balloon.speed)
+        if balloon.ycor() < -300:
+            balloons.remove(balloon)
+            balloon.hideturtle()
+
+        # Check for collision of balloon with p
+        if p.distance(balloon) < 30:
+            if balloon.is_bomb:
+                game_over()
+            else:
+                update_score(10)
+                balloons.remove(balloon)
+                balloon.hideturtle()
+    game_speed = max(0.005, game_speed - difficulty_increase)
+    span_interval =max(0.5, spawn_interval-0.0005)
+    time.sleep(game_speed)
+    
+
+
+    
+
+
 
 
 
