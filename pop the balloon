@@ -1,0 +1,26 @@
+import turtle
+import random
+import time
+
+# scr setup
+scr = turtle.Screen()
+scr.bgcolor("pink")
+scr.setup(800,600)
+scr.tracer(0)
+
+#player setup
+p = turtle.Timurtle()
+p.shape("triangle")
+p.color("red")
+p.penup()
+p.goto(0,-250)
+p.setheading(90)
+
+#score display
+score =  0
+score_display = turtle.Turtle()
+score_display.hideturtle()
+
+
+
+
