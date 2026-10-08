@@ -34,6 +34,7 @@ start_time = time.time()
 #Loop to draw circles with decreasing delay
 for i in range(70):
     draw_circle()
+    time.sleep(delay)
     t.clear()
     delay = max(0.01, delay - 0.05)
 
