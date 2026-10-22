@@ -1,3 +1,4 @@
+
 import turtle
 import random
 import time
@@ -21,7 +22,7 @@ score =  0
 score_display = turtle.Turtle()
 score_display.hideturtle()
 score_display.penup()
-score_display.goto(-380,-280)
+score_display.goto(-380,280)
 score_display.color("brown")
 score_display.write(f"Score: {score}", font = ("Arial", 16 , "normal"))
 
@@ -59,11 +60,12 @@ def spawn_balloon():
         balloon.is_bomb = True
     else:
         balloon.is_bomb = False
-        balloons.append(balloon)
+    balloons.append(balloon)
 
 def update_score(points):
     global score
     score += points
+    score_display.clear()
     score_display.write(f"Score: {score}",font=("Arial", 16,"normal"))
 
 def game_over():
@@ -88,7 +90,7 @@ while running:
     current_time = time.time()
     #spawn balloons at intervals
     if current_time - last_spawn_time > spawn_interval:
-        spawn_balloon
+        spawn_balloon()
         last_spawn_time = current_time
 
     #move ballons
