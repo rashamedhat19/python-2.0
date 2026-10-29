@@ -1,0 +1,29 @@
+my_friend = {"Dhaani": "playing tag",
+             "Maryam": "Smelling perfume",
+             "Sanjana": "Talking",
+             "Emma": "Drawing",
+             "Naama": "Playing Basketball"}
+
+print(f'friend dictionary = {my_friend}\n')
+#to get no of items in a dictionary
+print(f"Total item = {len(my_friend)}\n")
+
+#to retrive the value of a key in a dictionary
+print(f'Hobby of Sanjana = {my_friend['Sanjana']}\n')
+
+print(f'Hobby of Dhaani = {my_friend['Dhaani']}\n')
+
+#change the value
+my_friend['Naama']='Asking questions'
+print(f'Changed hobby of Naama = {my_friend["Naama"]}')
+
+#adding a new comment into the dictionary
+my_friend['Lidiia']='Dancing,Singing'
+print(f'Added (friend) Lidiia = {my_friend['Lidiia']}')
+print(f'{my_friend}\n')
+
+#retreiving all keys only
+print(f'Keyes:\n{my_friend.keys()}\n')
+
+#retreiving all values only
+print(f'Keyes:\n{my_friend.values()}\n')
