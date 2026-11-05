@@ -1,0 +1,34 @@
+sample_dict ={
+    "name" : "Perry",
+    "age" : 12,
+    "country" : "Egypt",
+}
+#store list as a value in the dictionary
+sample_dict["marks"] = [4,6,7,6,8,5]
+print(sample_dict,'\n')
+
+#Access a country
+print(f"country={sample_dict['country']}\n")
+#Access a value in the list stored in the dictitionary
+print(f"marks={sample_dict['marks']}\n")
+#Access the 3rd marks from the dict
+print(f"3rd marks={sample_dict['marks'][2]}\n")
+print(f"6th marks={sample_dict['marks'][5]}\n")
+
+#create a nested dictionary
+classroom={
+    "Perry" :{
+        "age":12,
+        "marks" : [4,5,6,7,8]
+    },
+    "Maria" :{
+        "age":11,
+        "marks" : [8,7,5,4,6]
+    }
+}
+
+print(classroom,'\n')
+
+print(f"no of items ={len(classroom)}\n")
+#Accsess age of PERRy!
+print(f"Age of Perry={classroom['Perry']['age']}\n")
