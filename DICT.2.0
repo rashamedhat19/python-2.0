@@ -32,3 +32,21 @@ print(classroom,'\n')
 print(f"no of items ={len(classroom)}\n")
 #Accsess age of PERRy!
 print(f"Age of Perry={classroom['Perry']['age']}\n")
+print(f"2knd Mark of Maria={classroom['Maria']['marks'][1]}\n")
+
+# get the values only from classroom dict using for loop
+for i in classroom.keys():
+    print(classroom[i],"\n")
+
+#get the key value pair from the classroom dict usig for loop
+for k,v in classroom.items():
+    print(k,v)
+
+#Changing Maria's age from 11 to 12
+classroom['Maria']['age']=12
+print(f"\nUpdated age of Maria:{classroom['Maria']['age']} years old")
+
+#Changing Maria's grade from 7 to 9
+classroom['Maria']['marks'][1]=9
+print(f"\nUpdating Maria's grades to:{classroom['Maria']['marks']}")
+
